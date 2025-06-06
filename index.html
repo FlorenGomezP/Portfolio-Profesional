@@ -28,13 +28,6 @@
   <!-- Main CSS File -->
   <link href="assets/css/main.css" rel="stylesheet">
 
-  <!-- =======================================================
-  * Template Name: iPortfolio
-  * Template URL: https://bootstrapmade.com/iportfolio-bootstrap-portfolio-websites-template/
-  * Updated: Jun 29 2024 with Bootstrap v5.3.3
-  * Author: BootstrapMade.com
-  * License: https://bootstrapmade.com/license/
-  ======================================================== -->
 </head>
 
 <body class="index-page">
@@ -232,8 +225,8 @@
               </ul>
             </div><!-- Edn Resume Item -->
             
-<a href="assets/img/Florentina_Gomez_CV.pdf" target="_blank" style="display: inline-flex; align-items: center; margin-left: 28px; color: #30bcfc; text-decoration: none; font-weight: 500;">
-  <i class="fas fa-file-arrow-down" style="margin-right: 8px; color: #30bcfc;"></i> Descargar CV
+<a href="assets/img/Florentina_Gomez_CV.pdf" target="_blank" class="bi bi-chevron-right">
+  <i class="fas fa-file-arrow-down" style="margin-right: 8px; "></i> Descargar CV
 </a>
           </div>
 
@@ -809,12 +802,11 @@
               </div>
             </div>
 
-            <a href="https://www.linkedin.com/in/florentina-gomez-pietrobono-53758416b/" target="_blank" 
-   style="position: fixed; bottom: 75px; right: 24px; background-color: #25B6F4; color: white; 
-          padding: 10px 16px; border-radius: 30px; text-decoration: none; 
-          font-weight: 600; box-shadow: 0 4px 8px rgba(0,0,0,0.2); z-index: 999;">
-  💬 Contáctame
-</a>
+            <a href="https://www.linkedin.com/in/florentina-gomez-pietrobono-53758416b/"
+               target="_blank"
+               class="contact-button">
+               💬 Contáctame
+            </a>
           
           </div> <!-- end col -->      
 
@@ -852,6 +844,11 @@
   const toggle = document.getElementById('toggle-dark-mode');
   toggle.addEventListener('click', () => {
     document.body.classList.toggle('dark-mode');
+    if (document.body.classList.contains('dark-mode')) {
+      toggle.textContent = '☀️ Modo Claro';
+    } else {
+      toggle.textContent = '🌙 Modo Oscuro';
+    }
   });
 </script>  <!-- MODO OSCURO -->
 
